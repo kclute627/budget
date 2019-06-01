@@ -1,0 +1,23 @@
+.income{
+
+
+
+    &__bar{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.5rem;
+        color: #fff;
+        @include incomeDisplay;
+        background-color: rgb(25, 167, 167);
+
+        &-name{
+            color: rgb(54, 54, 54);
+            margin-left: 1.5rem;
+        }
+        &-total{
+            margin-right: 3.6rem;
+            color: #fff;
+        }
+    }
+}

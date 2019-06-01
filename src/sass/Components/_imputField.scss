@@ -1,0 +1,74 @@
+.imputField{
+    width: 100%;
+    height: 7rem;
+    background: rgb(235, 235, 235);
+   
+
+
+
+    &__form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        overflow: hidden;
+        
+        
+        
+        
+        
+
+        &-dropdown{
+            border-radius: 5px;
+            font-weight: 300;
+            padding: 1.3rem;
+            border: none;
+            margin-right: 1.5rem;   
+        }
+
+        &-input{
+            
+            width: 25rem;
+            padding: 1.3rem;
+            border-radius: .5rem;
+            border: none;
+            margin-right: 1.5rem;
+        }
+        &-amount{
+            width: 7rem;
+            padding: 1.3rem;
+            border-radius: 5px;
+            
+            border: none;
+        }
+    }
+    
+}
+.check{
+    height: 4rem;
+    width: 4rem;
+    margin-left: 1.5rem;
+    
+    cursor: pointer;
+
+    &-green{
+        fill: green;
+    }
+    &-red{
+        fill: red;
+    }
+}
+
+.green{
+    &:focus{
+        outline: none;
+        border: 1px solid green;
+    }
+}
+
+.red{
+    &:focus{
+        outline: none;
+        border: 1px solid red;
+    }
+}
