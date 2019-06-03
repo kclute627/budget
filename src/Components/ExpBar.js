@@ -5,6 +5,7 @@ import React from 'react';
 
 const ExpBar = props => {
     
+    const percent = Math.floor((parseInt(props.minusAmount) / parseInt(props.plusAmount))*100)
 
     return(
         <div className="exp__bar">
@@ -14,7 +15,7 @@ const ExpBar = props => {
             <div className="exp__bar-total">
              - {props.minusAmount}
             </div>
-            <div className="exp__bar-percent"> { !props.percentExp ?'-' : props.percentExp } </div>
+            <div className="exp__bar-percent"> { !props.plusAmount || props.plusAmount < 1 ?'-' : `${percent}%` } </div>
         </div>
     )
 }

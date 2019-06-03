@@ -49,7 +49,7 @@ class ImputField extends Component {
 
     submitHandler = () => {        
 
-        if (this.state.value && this.state.dropDown === '+'){
+        if (this.state.value && this.state.description && this.state.dropDown === '+'){
 
             let plus = [...this.state.plus, {
                 key: this.keyCreater(),
@@ -76,7 +76,7 @@ class ImputField extends Component {
 
             
             
-        }else if(this.state.value && this.state.dropDown === '-') {
+        }else if(this.state.value && this.state.description && this.state.dropDown === '-') {
             let minus = [...this.state.minus, {
                 key: this.keyCreater(),
                 description: this.state.description,
@@ -110,6 +110,8 @@ class ImputField extends Component {
         
         
     }
+
+
 
     removeIncomeHandler = (id, positive) => {        
         
@@ -165,6 +167,10 @@ class ImputField extends Component {
        
     }
 
+    formatNumber = (num) => {
+        return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
+    }
+
     
 
 
@@ -182,6 +188,7 @@ class ImputField extends Component {
                 minusAmount= {minusAmount}
                 amount = {amount}
                 expPercent={expPercent}
+                formatNumber ={this.formatNumber}
                  />
             
             <div className="imputField">
@@ -219,10 +226,15 @@ class ImputField extends Component {
                 <Income
                  incomeArr = {plus}
                  remove = {this.removeIncomeHandler}
+                 formatNumber = {this.formatNumber}
                  />
                 <Expenses
                 expArr = {minus}
                 remove = {this.removeIncomeHandler}
+                plusAmount = {plusAmount}
+                formatNumber = {this.formatNumber}
+                incomeArr = {plus}
+
                  />
             </div>
             </Fragment>
