@@ -1,5 +1,44 @@
 .income{
 
+    width: 50%;
+    margin-right: 2rem;
+    overflow: hidden;
+    
+
+    &__header{
+        color: green;
+        @include header1;
+
+    }
+
+    &__data{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 2rem;
+        height: 4rem;
+        border-top: 1px solid rgb(187, 187, 187);
+        border-bottom: 1px solid rgb(187, 187, 187);
+        transition: all .2s ease-out;
+
+        &-description{
+            // margin-right: auto;
+            margin-left: 1.5rem;         
+
+
+        }
+        &-value{
+            color: green;
+            margin-left: auto;
+            margin-right: 1.5rem;
+
+        }
+        &-svg{
+            opacity: 0;
+            transition: all .3s ease-out;
+        }
+    }
+
 
 
     &__bar{
@@ -20,4 +59,21 @@
             color: #fff;
         }
     }
+}
+
+
+
+
+.income__data:hover .income__data-svg {
+   
+    opacity: 1;
+    height: 2rem;
+    width: 2rem;
+    fill: green;
+    align-self: center;
+    margin-right: 1.5rem;
+    cursor: pointer;
+    
+    
+
 }

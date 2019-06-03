@@ -6,3 +6,9 @@
     border-radius: 4px;
     
 }
+@mixin header1 {
+    text-transform: capitalize;
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+}

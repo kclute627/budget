@@ -13,7 +13,7 @@ const IncomeBar = props => {
                 Income
             </div>
             <div className="income__bar-total">
-             + {props.total}
+             + {props.plusAmount}
             </div>
         </div>
     )

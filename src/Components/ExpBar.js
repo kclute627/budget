@@ -12,7 +12,7 @@ const ExpBar = props => {
                 expenses
             </div>
             <div className="exp__bar-total">
-             - {props.total}
+             - {props.minusAmount}
             </div>
             <div className="exp__bar-percent"> { !props.percentExp ?'-' : props.percentExp } </div>
         </div>

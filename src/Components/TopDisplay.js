@@ -12,7 +12,7 @@ class TopDisplay extends Component {
     render(){
         
 
-        const { date, amount, expPercent } = this.props
+        const { date, amount, expPercent, plusAmount, minusAmount } = this.props
         return(
             <div className="container">
                 <div className="topDisplay">
@@ -21,9 +21,10 @@ class TopDisplay extends Component {
                     </div>
                     <div className="topDisplay__amount">{amount}</div> 
                     <IncomeBar
-                    total='0.00'/>
+                    plusAmount={plusAmount}
+                    total={amount}/>
                     <ExpBar 
-                    total = '0.00'
+                    minusAmount = {minusAmount}
                     percentExp = {expPercent}/>  
                              
                 </div>            
