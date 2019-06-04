@@ -16,7 +16,7 @@ class TopDisplay extends Component {
         
         
         
-        amount = parseInt(amount).toFixed(2)
+        amount = parseFloat(amount).toFixed(2)
 
 
        

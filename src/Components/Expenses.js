@@ -8,8 +8,8 @@ import exit from '../assets/2.svg';
 class Expenses extends Component {
     percentHandler =(num) => {
         if(this.props.plusAmount && this.props.plusAmount >= 1){
-            let amount = parseInt(this.props.plusAmount)
-            let percent = Math.floor((parseInt(num) / amount)*100);
+            let amount = parseFloat(this.props.plusAmount)
+            let percent = Math.floor((parseFloat(num) / amount)*100);
             
             return `${percent}%`
 
@@ -31,7 +31,7 @@ class Expenses extends Component {
                 className={i%2 !== 0 ? "expenses__data gray": "expenses__data"}>
                     <div className="expenses__data-description">{cur.description}</div>
                     
-                    <div className="expenses__data-value">- {formatNumber(parseInt(cur.value).toFixed(2))}</div>
+                    <div className="expenses__data-value">- {formatNumber(parseFloat(cur.value).toFixed(2))}</div>
                     <div className="expenses__data-percent">{plusAmount ? this.percentHandler(cur.value) : null}</div>
                     <ReactSVG className="expenses__data-svg" src={exit} onClick= {()=>remove(cur.key, cur.positive)}/>              
                     
